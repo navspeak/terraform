@@ -8,14 +8,14 @@ MY_LAPTOP_IP = "172.X.X.X/32"
 ```
 # Multiple Providers:
 
-| Default Provider &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;|      Non Default Provider      | 
+|<pre>Default Provider                         </pre>|<pre>Non Default Provider                        </pre>| 
 |--------------------------                     |--------------------------------|
 | provider "aws" {                              |  provider "aws" {              | 
 | region ="us-east-1"                           |    region = "us-west-2"        |  
 | }                                             |    alias = "london"            |
 |                                               |     }                          |
 
-| Resource from default                         |      Resource from Non-default      | 
+| <pre>Resource from Default Provider           </pre>|<pre>Resource from Non-default                </pre>| 
 |--------------------                           |-------------------------------- |
 | resource "aws_vpc" "vpc_from_default" {       | resource "aws_vpc" "vpc_from_default_non_default" { |
 |  cidr_block = "10.0.0.0/16"                   | cidr_block = "10.1.0.0/16" |
